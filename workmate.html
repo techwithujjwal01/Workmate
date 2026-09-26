@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkMate - Plan. Work. Complete.</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://jsdelivr.net"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+        }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen flex flex-col">
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-blue-600 px-6 py-4 flex justify-between items-center shadow-lg">
+        <div class="flex items-center space-x-3">
+            <div class="bg-white text-blue-600 p-2 rounded-lg font-bold text-xl shadow-inner">
+                <i class="fa-solid fa-square-check"></i>
+            </div>
+            <div>
+                <h1 class="text-2xl font-black tracking-wide text-white">WorkMate</h1>
+                <p class="text-xs text-blue-200">Plan. Work. Complete.</p>
+            </div>
+        </div>
+        <div class="hidden md:flex space-x-6 text-sm font-medium text-white">
+            <span><i class="fa-solid fa-graduation-cap mr-1"></i> Students</span>
+            <span><i class="fa-solid fa-briefcase mr-1"></i> Employees</span>
+            <span><i class="fa-solid fa-user-tie mr-1"></i> Freelancers</span>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Body -->
+    <main class="flex-grow p-4 max-w-md mx-auto w-full">
+
+        <!-- Welcome & Progress Section -->
+        <div class="bg-slate-800 rounded-2xl p-5 mb-5 shadow-md border border-slate-700">
+            <div class="flex justify-between items-center mb-4">
+                <div>
+                    <h2 class="text-xl font-bold text-white">Good Morning, 👋</h2>
+                    <p class="text-xs text-slate-400">Stay focused, stay consistent!</p>
+                </div>
+                <button class="text-slate-400 hover:text-white relative">
+                    <i class="fa-solid fa-bell text-xl"></i>
+                    <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+            </div>
+
+            <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50">
+                <div class="flex justify-between text-xs mb-2">
+                    <span class="text-slate-400">Today's Progress</span>
+                    <span class="text-blue-400 font-bold">4/5 tasks completed</span>
+                </div>
+                <div class="w-full bg-slate-700 rounded-full h-2.5">
+                    <div class="bg-blue-500 h-2.5 rounded-full" style="width: 80%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Add Actions -->
+        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3 px-1">Quick Add</h3>
+        <div class="grid grid-cols-4 gap-3 mb-6">
+            <button class="bg-slate-800 hover:bg-slate-700 p-3 rounded-xl flex flex-col items-center border border-slate-700 transition">
+                <i class="fa-solid fa-list-check text-blue-400 text-lg mb-1"></i>
+                <span class="text-[10px]">Task</span>
+            </button>
+            <button class="bg-slate-800 hover:bg-slate-700 p-3 rounded-xl flex flex-col items-center border border-slate-700 transition">
+                <i class="fa-solid fa-note-sticky text-yellow-400 text-lg mb-1"></i>
+                <span class="text-[10px]">Note</span>
+            </button>
+            <button class="bg-slate-800 hover:bg-slate-700 p-3 rounded-xl flex flex-col items-center border border-slate-700 transition">
+                <i class="fa-solid fa-stopwatch text-red-400 text-lg mb-1"></i>
+                <span class="text-[10px]">Focus</span>
+            </button>
+            <button class="bg-slate-800 hover:bg-slate-700 p-3 rounded-xl flex flex-col items-center border border-slate-700 transition">
+                <i class="fa-solid fa-calendar-days text-green-400 text-lg mb-1"></i>
+                <span class="text-[10px]">Calendar</span>
+            </button>
+        </div>
+
+        <!-- Today's Tasks List -->
+        <div class="flex justify-between items-center mb-3 px-1">
+            <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider">Today's Tasks</h3>
+            <a href="#" class="text-xs text-blue-400 hover:underline">View all</a>
+        </div>
+
+        <div class="space-y-3 mb-20">
+            <!-- Task 1 (High Priority) -->
+            <div class="bg-slate-800 p-4 rounded-xl flex items-center justify-between border border-slate-700 border-l-4 border-l-red-500">
+                <div class="flex items-center space-x-3">
+                    <input type="checkbox" class="w-4 h-4 rounded border-slate-600 text-blue-500 bg-slate-900 focus:ring-0">
+                    <div>
+                        <h4 class="text-sm font-semibold text-white">Complete Maths HW</h4>
+                        <p class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 09:00 AM</p>
+                    </div>
+                </div>
+                <span class="text-[10px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded font-bold uppercase">High</span>
+            </div>
+
+            <!-- Task 2 (Completed) -->
+            <div class="bg-slate-800/60 p-4 rounded-xl flex items-center justify-between border border-slate-700/50 opacity-60">
+                <div class="flex items-center space-x-3">
+                    <input type="checkbox" checked class="w-4 h-4 rounded border-slate-600 text-blue-500 bg-slate-900 focus:ring-0">
+                    <div>
+                        <h4 class="text-sm font-semibold text-white line-through">Attend Meeting</h4>
+                        <p class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 11:00 AM</p>
+                    </div>
+                </div>
+                <span class="text-[10px] bg-green-500/20 text-green-400 px-2 py-0.5 rounded font-bold uppercase">Done</span>
+            </div>
+
+            <!-- Task 3 (Medium Priority) -->
+            <div class="bg-slate-800 p-4 rounded-xl flex items-center justify-between border border-slate-700 border-l-4 border-l-amber-500">
+                <div class="flex items-center space-x-3">
+                    <input type="checkbox" class="w-4 h-4 rounded border-slate-600 text-blue-500 bg-slate-900 focus:ring-0">
+                    <div>
+                        <h4 class="text-sm font-semibold text-white">Prepare Project</h4>
+                        <p class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 02:00 PM</p>
+                    </div>
+                </div>
+                <span class="text-[10px] bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded font-bold uppercase">Medium</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation Bar (Mobile View) -->
+    <nav class="bg-slate-900 border-t border-slate-800 fixed bottom-0 left-0 right-0 py-2 z-50">
+        <div class="max-w-md mx-auto flex justify-around items-center">
+            <a href="#" class="flex flex-col items-center text-blue-500">
+                <i class="fa-solid fa-house text-lg"></i>
+                <span class="text-[10px] mt-0.5">Home</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-slate-400 hover:text-slate-200">
+                <i class="fa-solid fa-list-check text-lg"></i>
+                <span class="text-[10px] mt-0.5">Tasks</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-slate-400 hover:text-slate-200">
+                <i class="fa-solid fa-calendar-days text-lg"></i>
+                <span class="text-[10px] mt-0.5">Calendar</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-slate-400 hover:text-slate-200">
+                <i class="fa-solid fa-note-sticky text-lg"></i>
+                <span class="text-[10px] mt-0.5">Notes</span>
+            </a>
+        </div>
+    </nav>
+
+</body>
+</html>
